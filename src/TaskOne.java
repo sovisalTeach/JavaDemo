@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.math.MathContext;
 import java.util.Scanner;
 
 public class TaskOne {
@@ -101,16 +102,23 @@ public class TaskOne {
             case "/":
                 if (num2.compareTo(BigDecimal.ZERO) == 0) {
                     System.out.println("Cannot divide by zero.");
-                    return;
+                    result=new BigDecimal("0");
+                    break;
                 }
-                result = num1.divide(num2, 10, BigDecimal.ROUND_HALF_UP);
-                break;
+                else
+                {
+                    result = num1.divide(num2, MathContext.DECIMAL64);
+                    break;
+                }
+
             default:
                 System.out.println("Invalid operator.");
-                return;
+                result=new BigDecimal("0");
+        }
+        if(result.compareTo(BigDecimal.ZERO)!=0){
+            System.out.println("Result: " + result);
         }
 
-        System.out.println("Result: " + result);
 
         input.close();
     }
