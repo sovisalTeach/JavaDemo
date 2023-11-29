@@ -107,7 +107,7 @@ public class TaskOne {
                 }
                 else
                 {
-                    result = num1.divide(num2, MathContext.DECIMAL64);
+                    result = num1.divide(num2, MathContext.DECIMAL32);
                     break;
                 }
 
