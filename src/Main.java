@@ -1,16 +1,22 @@
-import DemoOOPs.*;
+import MidtermS1.ExerciseOne.DateConversion;
+import MidtermS1.ExerciseTwo.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-//        BankAccountManagementSystem account = new BankAccountManagementSystem("200500400",1000.0,"Chenda Sovisal", "chendasovisal@gmail.com", "092834989");
+        //exercise one
+//        DateConversion obj = new DateConversion();
 
-        Cone obj = new Cone(10,10);
-        System.out.println("R is : "+obj.r);
-        System.out.println("H is : "+obj.h);
-        System.out.println("Area is :"+obj.getArea());
-        System.out.println("Volume is : "+obj.getVolume());
+        //exercise two
+        Rectangle rectangle = new Rectangle(10,50);
+        System.out.println("Rectangle Area: "+rectangle.getArea());
+        System.out.println("Rectangle Perimeter: "+rectangle.getPerimeter());
+
+        System.out.println("\n==================================================");
+        Square square = new Square(10);
+        System.out.println("Square Area: "+square.getArea());
+        System.out.println("Square Perimeter: "+square.getPerimeter());
 
 
 
